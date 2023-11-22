@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Windows|x64">
+      <Configuration>Debug Windows</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Windows|x64">
+      <Configuration>Release Windows</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Ship Windows|x64">
+      <Configuration>Ship Windows</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C54B388E-B103-7ADB-1A0B-533706E214CC}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Skateboard</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Windows|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Windows|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Ship Windows|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug Windows|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release Windows|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Ship Windows|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Windows|x64'">
+    <OutDir>..\bin\Debug-windows-x86_64\Skateboard\</OutDir>
+    <IntDir>..\intermediate\Debug-windows-x86_64\Skateboard\</IntDir>
+    <TargetName>Skateboard</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Windows|x64'">
+    <OutDir>..\bin\Release-windows-x86_64\Skateboard\</OutDir>
+    <IntDir>..\intermediate\Release-windows-x86_64\Skateboard\</IntDir>
+    <TargetName>Skateboard</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Ship Windows|x64'">
+    <OutDir>..\bin\Ship-windows-x86_64\Skateboard\</OutDir>
+    <IntDir>..\intermediate\Ship-windows-x86_64\Skateboard\</IntDir>
+    <TargetName>Skateboard</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Windows|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>sktbdpch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4006;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>SKTBD_PLATFORM_WINDOWS;SKTBD_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\imgui;vendor\frankluna;vendor\microsoft;vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Windows|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>sktbdpch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4006;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>SKTBD_PLATFORM_WINDOWS;SKTBD_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\imgui;vendor\frankluna;vendor\microsoft;vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Ship Windows|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>sktbdpch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4006;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>SKTBD_PLATFORM_WINDOWS;SKTBD_SHIP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\imgui;vendor\frankluna;vendor\microsoft;vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Platform\DirectX12\Api\D3DRenderingApi.h" />
+    <ClInclude Include="src\Platform\DirectX12\Assets\D3DAssetManager.h" />
+    <ClInclude Include="src\Platform\DirectX12\D3D.h" />
+    <ClInclude Include="src\Platform\DirectX12\D3DBuffer.h" />
+    <ClInclude Include="src\Platform\DirectX12\D3DFrameResources.h" />
+    <ClInclude Include="src\Platform\DirectX12\D3DGraphicsContext.h" />
+    <ClInclude Include="src\Platform\DirectX12\D3DPipeline.h" />
+    <ClInclude Include="src\Platform\DirectX12\Memory\D3DMemoryAllocator.h" />
+    <ClInclude Include="src\Platform\DirectX12\Memory\D3DTableAllocator.h" />
+    <ClInclude Include="src\Platform\DirectX12\MeshletPipeline\D3DMeshletPipeline.h" />
+    <ClInclude Include="src\Platform\DirectX12\MeshletPipeline\d3dx12.h" />
+    <ClInclude Include="src\Platform\DirectX12\Model\D3DMeshletModel.h" />
+    <ClInclude Include="src\Platform\DirectX12\ShaderTable.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsPlatform.h" />
+    <ClInclude Include="src\Skateboard.h" />
+    <ClInclude Include="src\Skateboard\Application.h" />
+    <ClInclude Include="src\Skateboard\Assets\AssetManager.h" />
+    <ClInclude Include="src\Skateboard\Camera.h" />
+    <ClInclude Include="src\Skateboard\Core.h" />
+    <ClInclude Include="src\Skateboard\EntryPoint.h" />
+    <ClInclude Include="src\Skateboard\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Skateboard\Input.h" />
+    <ClInclude Include="src\Skateboard\Layer.h" />
+    <ClInclude Include="src\Skateboard\LayerStack.h" />
+    <ClInclude Include="src\Skateboard\Log.h" />
+    <ClInclude Include="src\Skateboard\Mathematics.h" />
+    <ClInclude Include="src\Skateboard\Memory\DescriptorTable.h" />
+    <ClInclude Include="src\Skateboard\Memory\MemoryManager.h" />
+    <ClInclude Include="src\Skateboard\Platform.h" />
+    <ClInclude Include="src\Skateboard\Renderer\Api\RenderingApi.h" />
+    <ClInclude Include="src\Skateboard\Renderer\Buffer.h" />
+    <ClInclude Include="src\Skateboard\Renderer\FrameResources.h" />
+    <ClInclude Include="src\Skateboard\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Skateboard\Renderer\InternalFormats.h" />
+    <ClInclude Include="src\Skateboard\Renderer\Lights\Light.h" />
+    <ClInclude Include="src\Skateboard\Renderer\Materials\Material.h" />
+    <ClInclude Include="src\Skateboard\Renderer\MeshletEngine\MeshEngine.h" />
+    <ClInclude Include="src\Skateboard\Renderer\Model\Model.h" />
+    <ClInclude Include="src\Skateboard\Renderer\Model\Span.h" />
+    <ClInclude Include="src\Skateboard\Renderer\Pipeline.h" />
+    <ClInclude Include="src\Skateboard\Renderer\PipelineDescriptions.h" />
+    <ClInclude Include="src\Skateboard\Renderer\RenderCommand.h" />
+    <ClInclude Include="src\Skateboard\Renderer\Renderer.h" />
+    <ClInclude Include="src\Skateboard\Scene\AABB.h" />
+    <ClInclude Include="src\Skateboard\Scene\Components.h" />
+    <ClInclude Include="src\Skateboard\Scene\Entity.h" />
+    <ClInclude Include="src\Skateboard\Scene\InstanceData.h" />
+    <ClInclude Include="src\Skateboard\Scene\Scene.h" />
+    <ClInclude Include="src\Skateboard\Scene\SceneBuilder.h" />
+    <ClInclude Include="src\Skateboard\Scene\SceneRenderer.h" />
+    <ClInclude Include="src\Skateboard\Scene\ScriptableEntity.h" />
+    <ClInclude Include="src\Skateboard\SizedPtr.h" />
+    <ClInclude Include="src\Skateboard\Utilities\StringConverters.h" />
+    <ClInclude Include="src\sktbdpch.h" />
+    <ClInclude Include="vendor\frankluna\Timer.h" />
+    <ClInclude Include="vendor\microsoft\DDSTextureLoader.h" />
+    <ClInclude Include="vendor\microsoft\d3dx12.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Platform\DirectX12\Api\D3DRenderingApi.cpp" />
+    <ClCompile Include="src\Platform\DirectX12\Assets\D3DAssetManager.cpp" />
+    <ClCompile Include="src\Platform\DirectX12\D3DBuffer.cpp" />
+    <ClCompile Include="src\Platform\DirectX12\D3DFrameResources.cpp" />
+    <ClCompile Include="src\Platform\DirectX12\D3DGraphicsContext.cpp" />
+    <ClCompile Include="src\Platform\DirectX12\D3DPipeline.cpp" />
+    <ClCompile Include="src\Platform\DirectX12\Memory\D3DMemoryAllocator.cpp" />
+    <ClCompile Include="src\Platform\DirectX12\Memory\D3DTableAllocator.cpp" />
+    <ClCompile Include="src\Platform\DirectX12\MeshletPipeline\D3DMeshletPipeline.cpp" />
+    <ClCompile Include="src\Platform\DirectX12\Model\D3DMeshletModel.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsPlatform.cpp" />
+    <ClCompile Include="src\Skateboard\Application.cpp" />
+    <ClCompile Include="src\Skateboard\Assets\AssetManager.cpp" />
+    <ClCompile Include="src\Skateboard\Camera.cpp" />
+    <ClCompile Include="src\Skateboard\ImGui\ImGuiBuild.cpp" />
+    <ClCompile Include="src\Skateboard\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Skateboard\LayerStack.cpp" />
+    <ClCompile Include="src\Skateboard\Log.cpp" />
+    <ClCompile Include="src\Skateboard\Memory\MemoryManager.cpp" />
+    <ClCompile Include="src\Skateboard\Platform.cpp" />
+    <ClCompile Include="src\Skateboard\Renderer\Api\RenderingApi.cpp" />
+    <ClCompile Include="src\Skateboard\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Skateboard\Renderer\FrameResources.cpp" />
+    <ClCompile Include="src\Skateboard\Renderer\InternalFormats.cpp" />
+    <ClCompile Include="src\Skateboard\Renderer\Lights\Light.cpp" />
+    <ClCompile Include="src\Skateboard\Renderer\Materials\Material.cpp" />
+    <ClCompile Include="src\Skateboard\Renderer\MeshletEngine\MeshEngine.cpp" />
+    <ClCompile Include="src\Skateboard\Renderer\Model\Model.cpp" />
+    <ClCompile Include="src\Skateboard\Renderer\Pipeline.cpp" />
+    <ClCompile Include="src\Skateboard\Renderer\RenderCommand.cpp" />
+    <ClCompile Include="src\Skateboard\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Skateboard\Scene\Components.cpp" />
+    <ClCompile Include="src\Skateboard\Scene\Entity.cpp" />
+    <ClCompile Include="src\Skateboard\Scene\Scene.cpp" />
+    <ClCompile Include="src\Skateboard\Scene\SceneBuilder.cpp" />
+    <ClCompile Include="src\Skateboard\Scene\SceneRenderer.cpp" />
+    <ClCompile Include="src\sktbdpch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\frankluna\Timer.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\microsoft\DDSTextureLoader.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="src\Skateboard\ImGui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\WinPixEventRuntime.1.0.230302001\build\WinPixEventRuntime.targets" Condition="Exists('..\packages\WinPixEventRuntime.1.0.230302001\build\WinPixEventRuntime.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\WinPixEventRuntime.1.0.230302001\build\WinPixEventRuntime.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\WinPixEventRuntime.1.0.230302001\build\WinPixEventRuntime.targets'))" />
+  </Target>
+</Project>

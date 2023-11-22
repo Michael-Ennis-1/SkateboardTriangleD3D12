@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform">
+      <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\DirectX12">
+      <UniqueIdentifier>{2649C2B7-1243-EB09-FBAF-811AE7485176}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\DirectX12\Api">
+      <UniqueIdentifier>{4F5589F4-3B65-35C5-A41E-9AE3904D245E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\DirectX12\Assets">
+      <UniqueIdentifier>{4809EEC2-B421-D5EC-7DCE-6486E9A56986}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\DirectX12\Memory">
+      <UniqueIdentifier>{CE79EBDD-3A92-D207-033F-62A16F1667A1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\DirectX12\MeshletPipeline">
+      <UniqueIdentifier>{3D943246-29E6-0936-1205-4746FEF5221F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\DirectX12\Model">
+      <UniqueIdentifier>{E6760C3D-D231-FCE8-7BE9-743367834679}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\Windows">
+      <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard">
+      <UniqueIdentifier>{7CE83EC5-68B6-32CB-514A-A3F13DB70E30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Assets">
+      <UniqueIdentifier>{DE4B3F8E-4AB8-FA88-13AC-92E67FD71CF1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\ImGui">
+      <UniqueIdentifier>{A6CA0ABF-9259-9488-3B78-A88327E6A42E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Memory">
+      <UniqueIdentifier>{64BC3CA9-D028-F8A3-991C-900105481A0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Renderer">
+      <UniqueIdentifier>{A2772D8A-0EAF-7521-17B9-D944836F9C1A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Renderer\Api">
+      <UniqueIdentifier>{CB619F4D-376F-CD33-C055-C91E2C6299EA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Renderer\Lights">
+      <UniqueIdentifier>{5CD609AC-48FC-D312-3142-59DE1D07F9DE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Renderer\Materials">
+      <UniqueIdentifier>{F3ECEF84-5F5B-4504-A844-000414F23AA0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Renderer\MeshletEngine">
+      <UniqueIdentifier>{19C84A5E-858C-494E-4EF2-7918BA75E583}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Renderer\Model">
+      <UniqueIdentifier>{6292D733-CEAA-BE5D-9757-4EF7032F53F7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Scene">
+      <UniqueIdentifier>{99C2BABF-8551-4489-2E70-58841ADE542F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Skateboard\Utilities">
+      <UniqueIdentifier>{E7D73C97-D3FC-8B17-FC47-71A7E8CB8A35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\frankluna">
+      <UniqueIdentifier>{84580C6D-7051-2BBF-9983-104485DB0ACB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\microsoft">
+      <UniqueIdentifier>{D82DB8F1-C426-D743-ED58-BCC8D9B0B64F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Platform\DirectX12\Api\D3DRenderingApi.h">
+      <Filter>src\Platform\DirectX12\Api</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\DirectX12\Assets\D3DAssetManager.h">
+      <Filter>src\Platform\DirectX12\Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\DirectX12\D3D.h">
+      <Filter>src\Platform\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\DirectX12\D3DBuffer.h">
+      <Filter>src\Platform\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\DirectX12\D3DFrameResources.h">
+      <Filter>src\Platform\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\DirectX12\D3DGraphicsContext.h">
+      <Filter>src\Platform\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\DirectX12\D3DPipeline.h">
+      <Filter>src\Platform\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\DirectX12\Memory\D3DMemoryAllocator.h">
+      <Filter>src\Platform\DirectX12\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\DirectX12\Memory\D3DTableAllocator.h">
+      <Filter>src\Platform\DirectX12\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\DirectX12\MeshletPipeline\D3DMeshletPipeline.h">
+      <Filter>src\Platform\DirectX12\MeshletPipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\DirectX12\MeshletPipeline\d3dx12.h">
+      <Filter>src\Platform\DirectX12\MeshletPipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\DirectX12\Model\D3DMeshletModel.h">
+      <Filter>src\Platform\DirectX12\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\DirectX12\ShaderTable.h">
+      <Filter>src\Platform\DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsPlatform.h">
+      <Filter>src\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Application.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Assets\AssetManager.h">
+      <Filter>src\Skateboard\Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Camera.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Core.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\EntryPoint.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\ImGui\ImGuiLayer.h">
+      <Filter>src\Skateboard\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Input.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Layer.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\LayerStack.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Log.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Mathematics.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Memory\DescriptorTable.h">
+      <Filter>src\Skateboard\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Memory\MemoryManager.h">
+      <Filter>src\Skateboard\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Platform.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\Api\RenderingApi.h">
+      <Filter>src\Skateboard\Renderer\Api</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\Buffer.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\FrameResources.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\GraphicsContext.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\InternalFormats.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\Lights\Light.h">
+      <Filter>src\Skateboard\Renderer\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\Materials\Material.h">
+      <Filter>src\Skateboard\Renderer\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\MeshletEngine\MeshEngine.h">
+      <Filter>src\Skateboard\Renderer\MeshletEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\Model\Model.h">
+      <Filter>src\Skateboard\Renderer\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\Model\Span.h">
+      <Filter>src\Skateboard\Renderer\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\Pipeline.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\PipelineDescriptions.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\RenderCommand.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Renderer\Renderer.h">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Scene\AABB.h">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Scene\Components.h">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Scene\Entity.h">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Scene\InstanceData.h">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Scene\Scene.h">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Scene\SceneBuilder.h">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Scene\SceneRenderer.h">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Scene\ScriptableEntity.h">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\SizedPtr.h">
+      <Filter>src\Skateboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skateboard\Utilities\StringConverters.h">
+      <Filter>src\Skateboard\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sktbdpch.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\frankluna\Timer.h">
+      <Filter>vendor\frankluna</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\microsoft\DDSTextureLoader.h">
+      <Filter>vendor\microsoft</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\microsoft\d3dx12.h">
+      <Filter>vendor\microsoft</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Platform\DirectX12\Api\D3DRenderingApi.cpp">
+      <Filter>src\Platform\DirectX12\Api</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\DirectX12\Assets\D3DAssetManager.cpp">
+      <Filter>src\Platform\DirectX12\Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\DirectX12\D3DBuffer.cpp">
+      <Filter>src\Platform\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\DirectX12\D3DFrameResources.cpp">
+      <Filter>src\Platform\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\DirectX12\D3DGraphicsContext.cpp">
+      <Filter>src\Platform\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\DirectX12\D3DPipeline.cpp">
+      <Filter>src\Platform\DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\DirectX12\Memory\D3DMemoryAllocator.cpp">
+      <Filter>src\Platform\DirectX12\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\DirectX12\Memory\D3DTableAllocator.cpp">
+      <Filter>src\Platform\DirectX12\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\DirectX12\MeshletPipeline\D3DMeshletPipeline.cpp">
+      <Filter>src\Platform\DirectX12\MeshletPipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\DirectX12\Model\D3DMeshletModel.cpp">
+      <Filter>src\Platform\DirectX12\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsPlatform.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Application.cpp">
+      <Filter>src\Skateboard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Assets\AssetManager.cpp">
+      <Filter>src\Skateboard\Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Camera.cpp">
+      <Filter>src\Skateboard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\ImGui\ImGuiBuild.cpp">
+      <Filter>src\Skateboard\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\ImGui\ImGuiLayer.cpp">
+      <Filter>src\Skateboard\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\LayerStack.cpp">
+      <Filter>src\Skateboard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Log.cpp">
+      <Filter>src\Skateboard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Memory\MemoryManager.cpp">
+      <Filter>src\Skateboard\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Platform.cpp">
+      <Filter>src\Skateboard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Renderer\Api\RenderingApi.cpp">
+      <Filter>src\Skateboard\Renderer\Api</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Renderer\Buffer.cpp">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Renderer\FrameResources.cpp">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Renderer\InternalFormats.cpp">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Renderer\Lights\Light.cpp">
+      <Filter>src\Skateboard\Renderer\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Renderer\Materials\Material.cpp">
+      <Filter>src\Skateboard\Renderer\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Renderer\MeshletEngine\MeshEngine.cpp">
+      <Filter>src\Skateboard\Renderer\MeshletEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Renderer\Model\Model.cpp">
+      <Filter>src\Skateboard\Renderer\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Renderer\Pipeline.cpp">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Renderer\RenderCommand.cpp">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Renderer\Renderer.cpp">
+      <Filter>src\Skateboard\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Scene\Components.cpp">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Scene\Entity.cpp">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Scene\Scene.cpp">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Scene\SceneBuilder.cpp">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Skateboard\Scene\SceneRenderer.cpp">
+      <Filter>src\Skateboard\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sktbdpch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\frankluna\Timer.cpp">
+      <Filter>vendor\frankluna</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\microsoft\DDSTextureLoader.cpp">
+      <Filter>vendor\microsoft</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

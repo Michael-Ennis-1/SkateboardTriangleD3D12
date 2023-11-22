@@ -1,0 +1,2 @@
+C:\Users\08051\Source\Repos\skateboard_engine\bin\Debug-windows-x86_64\Skateboard\WinPixEventRuntime.dll
+C:\Users\08051\source\repos\skateboard_engineTri\bin\Debug-windows-x86_64\Skateboard\WinPixEventRuntime.dll

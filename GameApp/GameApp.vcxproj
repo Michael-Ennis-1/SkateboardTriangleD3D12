@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Windows|x64">
+      <Configuration>Debug Windows</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Windows|x64">
+      <Configuration>Release Windows</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Ship Windows|x64">
+      <Configuration>Ship Windows</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{80D05747-ECAF-D6E2-F5C7-61B961263D44}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GameApp</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Windows|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Windows|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Ship Windows|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug Windows|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release Windows|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Ship Windows|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Windows|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\bin\Debug-windows-x86_64\GameApp\</OutDir>
+    <IntDir>..\intermediate\Debug-windows-x86_64\GameApp\</IntDir>
+    <TargetName>GameApp</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Windows|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\Release-windows-x86_64\GameApp\</OutDir>
+    <IntDir>..\intermediate\Release-windows-x86_64\GameApp\</IntDir>
+    <TargetName>GameApp</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Ship Windows|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\Ship-windows-x86_64\GameApp\</OutDir>
+    <IntDir>..\intermediate\Ship-windows-x86_64\GameApp\</IntDir>
+    <TargetName>GameApp</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Windows|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>SKTBD_PLATFORM_WINDOWS;SKTBD_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Skateboard\vendor\spdlog\include;..\Skateboard\src;..\Skateboard\vendor;..\Skateboard\vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <FxCompile>
+      <ShaderModel>6.5</ShaderModel>
+    </FxCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d12.lib;dxgi.lib;dxcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF EXIST "$(SolutionDir)vendor\bin\microsoft\Windows Kits\10.0.22621.0\x64"\ (xcopy /Q /E /Y /I "$(SolutionDir)vendor\bin\microsoft\Windows Kits\10.0.22621.0\x64" $(SolutionDir)bin\Debug-windows-x86_64\$(ProjectName) &gt; nul) ELSE (xcopy /Q /Y /I "$(SolutionDir)vendor\bin\microsoft\Windows Kits\10.0.22621.0\x64" $(SolutionDir)bin\Debug-windows-x86_64\$(ProjectName) &gt; nul)
+IF EXIST $(ProjectDir)assets\ (xcopy /Q /E /Y /I $(ProjectDir)assets $(SolutionDir)bin\Debug-windows-x86_64\$(ProjectName)\assets &gt; nul) ELSE (xcopy /Q /Y /I $(ProjectDir)assets $(SolutionDir)bin\Debug-windows-x86_64\$(ProjectName)\assets &gt; nul)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Windows|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>SKTBD_PLATFORM_WINDOWS;SKTBD_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Skateboard\vendor\spdlog\include;..\Skateboard\src;..\Skateboard\vendor;..\Skateboard\vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <FxCompile>
+      <ShaderModel>6.5</ShaderModel>
+    </FxCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d12.lib;dxgi.lib;dxcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF EXIST "$(SolutionDir)vendor\bin\microsoft\Windows Kits\10.0.22621.0\x64"\ (xcopy /Q /E /Y /I "$(SolutionDir)vendor\bin\microsoft\Windows Kits\10.0.22621.0\x64" $(SolutionDir)bin\Release-windows-x86_64\$(ProjectName) &gt; nul) ELSE (xcopy /Q /Y /I "$(SolutionDir)vendor\bin\microsoft\Windows Kits\10.0.22621.0\x64" $(SolutionDir)bin\Release-windows-x86_64\$(ProjectName) &gt; nul)
+IF EXIST $(ProjectDir)assets\ (xcopy /Q /E /Y /I $(ProjectDir)assets $(SolutionDir)bin\Release-windows-x86_64\$(ProjectName)\assets &gt; nul) ELSE (xcopy /Q /Y /I $(ProjectDir)assets $(SolutionDir)bin\Release-windows-x86_64\$(ProjectName)\assets &gt; nul)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Ship Windows|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>SKTBD_PLATFORM_WINDOWS;SKTBD_SHIP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Skateboard\vendor\spdlog\include;..\Skateboard\src;..\Skateboard\vendor;..\Skateboard\vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <FxCompile>
+      <ShaderModel>6.5</ShaderModel>
+    </FxCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d12.lib;dxgi.lib;dxcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF EXIST "$(SolutionDir)vendor\bin\microsoft\Windows Kits\10.0.22621.0\x64"\ (xcopy /Q /E /Y /I "$(SolutionDir)vendor\bin\microsoft\Windows Kits\10.0.22621.0\x64" $(SolutionDir)bin\Ship-windows-x86_64\$(ProjectName) &gt; nul) ELSE (xcopy /Q /Y /I "$(SolutionDir)vendor\bin\microsoft\Windows Kits\10.0.22621.0\x64" $(SolutionDir)bin\Ship-windows-x86_64\$(ProjectName) &gt; nul)
+IF EXIST $(ProjectDir)assets\ (xcopy /Q /E /Y /I $(ProjectDir)assets $(SolutionDir)bin\Ship-windows-x86_64\$(ProjectName)\assets &gt; nul) ELSE (xcopy /Q /Y /I $(ProjectDir)assets $(SolutionDir)bin\Ship-windows-x86_64\$(ProjectName)\assets &gt; nul)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\GameLayer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\GameApp.cpp" />
+    <ClCompile Include="src\GameLayer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Skateboard\Skateboard.vcxproj">
+      <Project>{C54B388E-B103-7ADB-1A0B-533706E214CC}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="src\PixelShader.hlsl">
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug Windows|x64'">6.5</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug Windows|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="src\VertexShader.hlsl">
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug Windows|x64'">6.5</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug Windows|x64'">Vertex</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\WinPixEventRuntime.1.0.230302001\build\WinPixEventRuntime.targets" Condition="Exists('..\packages\WinPixEventRuntime.1.0.230302001\build\WinPixEventRuntime.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\WinPixEventRuntime.1.0.230302001\build\WinPixEventRuntime.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\WinPixEventRuntime.1.0.230302001\build\WinPixEventRuntime.targets'))" />
+  </Target>
+</Project>
