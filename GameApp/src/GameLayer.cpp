@@ -18,16 +18,20 @@ GameLayer::GameLayer() :
 	{"POSITION", Skateboard::ShaderDataType_::Float3},
 	{"COLOR", Skateboard::ShaderDataType_::Float3}
 	};
+
 	float vertices[] = {
-		-1.0f, -1.0f, 0.0f,			1.0f, 0.0f, 0.0f,
-		0.0f, 1.0f, 0.0f,			0.0f, 1.0f, 0.0f,
-		1.0f, -1.0f, 0.0f,			0.0f, 0.0f, 1.0f
+		/*Position*/-1.0f, -1.0f, 0.0f,			/*Colour*/1.0f, 0.0f, 0.0f,
+		/*Position*/0.0f, 1.0f, 0.0f,			/*Colour*/0.0f, 1.0f, 0.0f,
+		/*Position*/1.0f, -1.0f, 0.0f,			/*Colour*/0.0f, 0.0f, 1.0f
 	};
+
 	p_VertexBuffer.reset(Skateboard::VertexBuffer::Create(L"Triangle Vertices", vertices, sizeof(vertices) , vertexLayout));
 	uint32_t indices[] = {
 		0u, 1u, 2u
 	};
+
 	p_IndexBuffer.reset(Skateboard::IndexBuffer::Create(L"Triangle Indices", indices, _countof(indices)));
+
 	Skateboard::RasterizationPipelineDesc pipelineDesc = {};
 	pipelineDesc.SetType(Skateboard::RasterizationPipelineType_Default);
 	pipelineDesc.SetDepthBias(PIPELINE_SETTINGS_DEFAULT_DEPTH_BIAS);
