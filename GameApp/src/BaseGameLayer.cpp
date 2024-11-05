@@ -8,12 +8,24 @@
 BaseGameLayer::BaseGameLayer() :
 	m_FPSClock(0.f),
 	m_FPS(0.f),
-	m_FrameTime(0.f)
+	m_FrameTime(0.f),
+	m_Camera(.25f * SKTBD_PI, 1280.f / 720.f, .1f, 1000.f, float3(0.f, 0.f, -10.f), float3(0.f, 0.f, -9.f), float3(0.f, 1.f, 0.f))
 {
-	Skateboard::BufferLayout vertexLayout = {
-	{"POSITION", Skateboard::ShaderDataType_::Float3},
-	{"COLOR", Skateboard::ShaderDataType_::Float3}
-	};
+	// Create new constant buffer, cache ID for later use
+	generalPassCBV = Skateboard::MemoryManager::CreateConstantBuffer(L"Pass Constant Buffer", 1, sizeof(PassBuffer));
+
+	// Pass buffer information to new constant buffer created in memory manager. Passing specifically view and projection matrices.
+	PassBuffer pass = {};
+	pass.ViewMatrix = m_Camera.GetViewMatrix();
+	pass.ProjectionMatrix = m_Camera.GetProjectionMatrix();
+	pass.ViewMatrixInverse = Skateboard::MatrixInverse(nullptr, pass.ViewMatrix);
+	pass.ProjectionMatrixInverse = Skateboard::MatrixInverse(nullptr, pass.ProjectionMatrix);
+	Skateboard::MemoryManager::UploadData(generalPassCBV, 0, &pass);
+
+	//Skateboard::BufferLayout vertexLayout = {
+	//{"POSITION", Skateboard::ShaderDataType_::Float3},
+	//{"COLOR", Skateboard::ShaderDataType_::Float3}
+	//};
 
 	Skateboard::RasterizationPipelineDesc pipelineDesc = {};
 	pipelineDesc.SetType(Skateboard::RasterizationPipelineType_Default);
@@ -23,8 +35,8 @@ BaseGameLayer::BaseGameLayer() :
 	pipelineDesc.SetVertexShader(L"VertexShader.cso", L"main");
 	pipelineDesc.SetPixelShader(L"PixelShader.cso", L"main");
 
-
-
+	// Add Camera buffer information
+	pipelineDesc.AddConstantBufferView()
 
 	p_Pipeline.reset(Skateboard::RasterizationPipeline::Create(L"Pipeline", pipelineDesc));
 

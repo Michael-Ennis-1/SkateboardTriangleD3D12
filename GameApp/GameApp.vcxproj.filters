@@ -2,10 +2,12 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClInclude Include="src\GameLayer.h" />
+    <ClInclude Include="src\BaseGameLayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameApp.cpp" />
     <ClCompile Include="src\GameLayer.cpp" />
+    <ClCompile Include="src\BaseGameLayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

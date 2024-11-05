@@ -160,9 +160,11 @@ IF EXIST $(ProjectDir)assets\ (xcopy /Q /E /Y /I $(ProjectDir)assets $(SolutionD
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\BaseGameLayer.h" />
     <ClInclude Include="src\GameLayer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\BaseGameLayer.cpp" />
     <ClCompile Include="src\GameApp.cpp" />
     <ClCompile Include="src\GameLayer.cpp" />
   </ItemGroup>

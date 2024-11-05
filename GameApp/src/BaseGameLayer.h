@@ -24,4 +24,9 @@ private:
 	std::shared_ptr<Skateboard::Scene> p_Scene{ nullptr };
 
 	Skateboard::Entity m_Cube;
+
+	Skateboard::PerspectiveCamera m_Camera;
+
+	// Buffer ID
+	uint32_t generalPassCBV;
 };
